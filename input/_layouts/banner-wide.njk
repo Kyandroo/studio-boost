@@ -1,0 +1,16 @@
+{% import "../_components/_banner.njk" as hero %}
+{% extends "./base.njk" %}
+
+{% block main %}
+    {% block top %}
+        {{ content | safe }}
+    {% endblock top %}
+
+    {% block mid %}
+        {{ content | safe }}
+    {% endblock mid %}
+
+    {% block bottom %}
+        {{ content | safe }}
+    {% endblock bottom %}
+{% endblock main %}

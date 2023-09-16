@@ -1,0 +1,10 @@
+{% macro blocks(content, tag, imageSrc, altText) %}
+    <div class="block-row">
+        <div class="block-row__text">
+            <{{ tag }}>
+                {{ content }}
+            </{{ tag }}>
+        </div>
+        <img src="{{ imageSrc }}" alt="{{ altText }}">
+    </div>
+{% endmacro %}

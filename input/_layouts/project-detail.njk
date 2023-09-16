@@ -1,0 +1,14 @@
+{% import "../_components/_banner.njk" as banner %}
+{% extends "./base.njk" %}
+
+{% block main %}
+    {% block top %}
+        <div class="project-detail__hero">
+            {{ banner.heroDetail(kind, title, intro, hero) }}
+        </div>
+    {% endblock top %}
+
+    <article class="container--extra-small project-detail__text">
+        {{ content | safe }}
+    </article>
+{% endblock main %}

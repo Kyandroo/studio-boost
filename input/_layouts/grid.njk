@@ -1,0 +1,31 @@
+{% import "../_components/_banner.njk" as file %}
+{% extends "./base.njk" %}
+
+{% block main %}
+    {% block top %}
+        {{ file.banner(bannerTitle, intro) }}
+    {% endblock top %}
+
+    {% block bottom %}
+        <article class="container--small grid-cards">
+            {% for item in collections[iterator] %}
+                <div class="grid-card card-{{ iterator }}">
+                    <a href="{{ item.page.url }}">
+                        {% if item.data.part %}
+                            <p class="card__part">
+                                {{ item.data.part }}
+                            </p>
+                        {% endif %}
+                        <p class="card__title">
+                            {{ item.data.title }}
+                            {% if item.data.kind %}
+                                - {{ item.data.kind }}
+                            {% endif %}
+                        </p>
+                        <img class="card__image" src="{{ item.data.image }}" alt="Foto van {{ item.data.title }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </article>
+    {% endblock bottom %}
+{% endblock main %}

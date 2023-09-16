@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Facebook",
+        "image": "/img/facebook.png",
+        "url": "https://www.facebook.com"
+    },
+    {
+        "title": "Instagram",
+        "image": "/img/instagram.png",
+        "url": "https://www.instagram.com"
+    },
+    {
+        "title": "LinkedIn",
+        "image": "/img/linkedin.png",
+        "url": "https://www.Linkedin.com"
+    }
+]

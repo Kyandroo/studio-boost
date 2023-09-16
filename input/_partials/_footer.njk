@@ -1,0 +1,39 @@
+{% import "../_components/_socials.njk" as file %}
+
+<footer class="footer">
+    <div class=" container--small footer__row-one columns">
+        <div class="columns__column">
+            <h2 class="footer__title">Studio Boost</h2>
+            <p class="read-text">Studio Boost is een creatief bureau gespecialiseerd in het ontwerpen en ontwikkelen van websites, webshops en logo’s.</p>
+            <p class="read-text">Heb je een idee of vraag? Aarzel niet om ons een mailtje te sturen via <a href="mailto: info@studioboost.be" class="footer__mail-link">info@studioboost.be</a></p>
+            
+            {{ file.socials(socials) }}
+        </div>
+
+        <nav class="footer__navbar columns__column columns__column--right">
+            <ul class="footer__menu-items">
+                {% for nav_item in collections.nav | sortByOrder %}
+                    <li class="menu__item">
+                        <a class="menu__link read-text {% if page.url == nav_item.page.url  %} menu__link--active {% endif %}" href="{{ nav_item.page.url }}">
+                            {{ nav_item.data.nav.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+
+    <hr class="container--small">
+
+    <div class="container--small footer__row-two columns read-text">
+        <p class="columns__column">&#169; Copyright {% currentYear %} - Studio Boost</p>
+        <div class="columns__column columns__column--right">
+            <p>
+                <a href="#">Cookies</a>
+            </p>
+            <p>
+                <a href="#">Privacy</a>
+            </p>
+        </div>
+    </div>
+</footer>

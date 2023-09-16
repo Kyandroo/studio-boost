@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <div class="container--wide">
+        <p class="navbar__logo">
+            <a href="{{ '/' | url }}" {% if menuColor == "dark" %}
+            style="color:var(--dark);"
+            {% endif %}>
+                Studio Boost
+            </a>
+        </p>
+
+        <ul class="menu-items">
+            {% for nav_item in collections.nav | sortByOrder %}
+                <li class="menu__item">
+                    <a class="menu__link
+                    {% if page.url == nav_item.page.url %} menu__link--active {% endif %} read-text"
+                    {% if menuColor == "dark" %}style="color:var(--dark); border-color:var(--dark)"{% endif %} href="{{ nav_item.page.url }}">
+                        {{ nav_item.data.nav.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

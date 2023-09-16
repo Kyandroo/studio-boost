@@ -1,0 +1,11 @@
+{% macro socials(socials) %}
+    <ul class="footer__socials">
+        {% for social in socials %}
+            <li class="social">
+                <a target="_blank" rel="noopener noreferrer" href="{{ social.url }}">
+                    <img src="{{ social.image }}" alt="Logo van {{ social.title }}">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

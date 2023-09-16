@@ -1,0 +1,135 @@
+---
+title: Studio Boost | Home
+tags: nav
+nav:
+    title: Home
+    order: 1
+---
+
+{% import "../_components/_banner.njk" as file %}
+{% import "../_components/_socials.njk" as fileSocials %}
+{% extends "../_layouts/banner-wide.njk" %}
+
+{% block top %}
+    <div class="banner-home--top">
+        <div class="hero-content">
+            <div class="hero-detail__text">
+                <h1>
+                    Wij zijn Studio Boost
+                </h1>
+                <p class="banner--top__intro">
+                    We zijn een digitaal branding agency en kunnen jouw bedrijf promoten dankzij <span class="underline">branding</span>, <span class="underline">website design</span>, <span class="underline">web development</span> en <span class="underline">digital marketing.</span>
+                </p>
+            </div>
+        </div>
+        <div class="container--small socials--hero">
+            {{ fileSocials.socials(socials) }}
+        </div>
+        <video class="banner-home__video" src="/img/hero-home.mp4" muted autoplay loop></video>
+    </div>
+{% endblock top %}
+
+{% block mid %}
+    <article class="container--small recent-work-block">
+        <h2>
+            Ons meest recente werk
+        </h2>
+        <p class="recent-work__text">
+            Van webshop tot een interactieve applicatie. Bij Studio Boost is ‘the sky the limit’. Wij realiseren jullie droomproject en plaatsen je bedrijf in een nieuw jasje.
+        </p>
+
+        <div class="grid-cards">
+            {% for item in collections.projects.slice(0, 3) %}
+                <div class="grid-card card-projects">
+                    <a href="{{ item.page.url }}">
+                        <p class="card__title">
+                            {{ item.data.title }} - {{ item.data.kind }}
+                        </p>
+                        <img class="card__image" src="{{ item.data.image }}" alt="Foto van {{ item.data.title }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a class="to-all-projects" href="../../projecten">
+            <p>
+                Bekijk alle projecten
+            </p>
+            <svg class="arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </article>
+
+    <article class="columns who-we-are-block">
+        <img aria-colspan="columns__column banner--top__image" src="/img/home-decoration.svg" alt="Foto van lijnen decoratie." class="who-we-are__image">
+        <div class="columns__column banner--top__intro">
+            <h2>Wie zijn wij?</h2>
+            <p>
+                Studio Boost is een creatief bureau dat gespecialiseerd is in het ontwerpen en ontwikkelen van websites, webshops en logo’s.
+            </p>
+            <p>
+                Het bureau heeft een passie voor het creëren van unieke en aantrekkelijke ontwerpen die passen bij de visie en missie van hun klanten. Ze werken nauw samen met hun klanten om ervoor te zorgen dat elk ontwerp volledig op maat gemaakt is en voldoet aan de behoeften van het bedrijf.
+            </p>
+            <p>
+                Het team van Studio Boost bestaat uit getalenteerde ontwerpers en ontwikkelaars die ervaring hebben met het werken met diverse industrieën.
+            </p>
+            <a class="about-button" href="../../over">
+                <p>
+                    Over Studio Boost
+                </p>
+            </a>
+        </div>
+    </article>
+
+    <article class="container--small news-block">
+        <section class="news__intro">
+            <h2>
+                Nieuws
+            </h2>
+            <p>
+                Blijf op de hoogte met de laatste nieuwtjes of leer bij met onze interessante blog-artikels.
+            </p>
+        </section>
+        <section class="columns">
+            <div class="columns__column news-block__image-left card-blogs">
+                <a href="../../blogs/mobiel-winkelen">
+                    <div class="card__title title--left">
+                        <p>
+                            Mobiel winkelen wordt de norm
+                        </p>
+                        <p>
+                            Anno 2023 is een smartphone bijna niet meer weg te denken.
+                        </p>
+                    </div>
+                    <img src="/img/blog-online-winkelen/hero.png" alt="Foto van een telefoon met chat, online winkel, ...">
+                </a>
+            </div>
+            <div class="columns__column news-block__grid-right grid-cards">
+                {% for item in collections.blogs.slice(1, 5) %}
+                    <div class="card-blogs grid-cards--home">
+                        <a href="{{ item.page.url }}">
+                            <p class="card__title">
+                                {{ item.data.title }}
+                            </p>
+                            <img class="card__image" src="{{ item.data.image }}" alt="Foto van {{ item.data.title }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </article>
+{% endblock mid %}
+
+{% block bottom %}
+    <article class="container--small clients-block">
+        <h2>
+            We werkten al eerder samen met
+        </h2>
+        <ul class="clients-list">
+            {% for client in clients %}
+                <li>
+                    <img src="{{ client.image }}" alt="Logo van {{ client.name }}">
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock bottom %}

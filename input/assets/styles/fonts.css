@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Sitka Display";
+    src: url("/fonts/sitkaDisplay.woff2") format("woff2"),
+        url("/fonts/sitkaDisplay.woff") format("woff");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Subset Work Sans";
+    src: url("/fonts/subset-WorkSans-Light.woff2") format("woff2"),
+        url("/fonts/subset-WorkSans-Light.woff") format("woff");
+    font-style: lighter;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Subset Work Sans";
+    src: url("/fonts/subset-WorkSans-Regular.woff2") format("woff2"),
+        url("/fonts/subset-WorkSans-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Subset Work Sans";
+    src: url("/fonts/subset-WorkSans-Bold.woff2") format("woff2"),
+        url("/fonts/subset-WorkSans-Bold.woff") format("woff");
+    font-style: bold;
+    font-weight: 600;
+}

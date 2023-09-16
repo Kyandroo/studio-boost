@@ -1,0 +1,56 @@
+---
+menuColor: dark
+---
+
+{% import "../_components/_banner.njk" as banner %}
+{% extends "./base.njk" %}
+
+{% block main %}
+    <article class="blog-detail">
+        <section class="container--wide blog__article-head">
+            <h1>{{ title }}</h1>
+            <p class="blog-detail__date">{{ dates }}</p>
+        </section>
+
+        {% block top %}
+            <section class="columns blog__article-banner">
+                {{ banner.hero(image, intro) }}
+            </section>
+        {% endblock top %}
+
+        <section class="container--extra-small blog__article-text">
+            {{ content | safe }}
+        </section>
+    </article>
+
+    <hr class="container--wide blog-detail__divide">
+
+    <div class="container--small other-blogs">
+        <h2>Andere artikelen over {{ part }}</h2>
+        
+        <div class="grid-cards">
+            {% for item in collections.all %}
+                {% if item.data.tag == tag and item.page.url != page.url %}
+                    <div class="grid-card card-blogs">
+                        <a href="{{ item.page.url }}">
+                            <p class="card__part">
+                                {{ item.data.part }}
+                            </p>
+                            <p class="card__title">
+                                {{ item.data.title }}
+                            </p>
+                            <img class="card__image" src="{{ item.data.image }}" alt="Foto van {{ item.data.title }}">
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <a class="to-all-blogs" href="../../blog">
+            <p>
+                Bekijk alle artikelen
+            </p>
+            <svg class="arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </div>
+{% endblock main %}

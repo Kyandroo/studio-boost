@@ -1,0 +1,33 @@
+{
+  "name": "studio-boost-kyandroo",
+  "version": "1.0.0",
+  "description": "Studio Boost - Deel 2 - Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --serve",
+    "css": "npx postcss input/assets/styles/*.css --dir input/assets/styles/dist --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pgmgent-ui-prototyping/studio-boost-Kyandroo.git"
+  },
+  "keywords": [
+    "Eleventy",
+    "Nunjucks"
+  ],
+  "author": "Kyandro De Volder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgmgent-ui-prototyping/studio-boost-Kyandroo/issues"
+  },
+  "homepage": "https://github.com/pgmgent-ui-prototyping/studio-boost-Kyandroo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "cssnano": "^5.1.15",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-nesting": "^11.2.1"
+  }
+}

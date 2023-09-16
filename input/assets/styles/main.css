@@ -1,0 +1,539 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(0, 0%, 44%);
+    --almost-white: hsl(216, 100%, 99%);
+    --dark: hsl(0, 0%, 0%);
+}
+
+body {
+    font-family: "Subset Work Sans";
+    font-style: normal;
+    font-weight: 300;
+}
+
+.banner__title {
+    font-family: "Sitka Display";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1;
+}
+
+h1 {
+    font-family: "Sitka Display";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1.5;
+}
+
+p {
+    font-family: "Subset Work Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.read-text {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+h2 {
+    font-family: "Sitka Display";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.container--wide {
+    max-width: 94rem;
+    margin: 0 auto;
+}
+
+.container--small {
+    max-width: 84rem;
+    margin: 0 auto;
+}
+
+.container--extra-small {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.add-padding {
+    padding: 1.5rem;
+}
+
+blockquote p {
+    font-size: 44px;
+    line-height: 1.3;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* ========== */
+
+.banner-home__text {
+    position: absolute;
+    z-index: 50;
+}
+
+.recent-work__text {
+    width: 34rem;
+    margin-bottom: -6rem;
+}
+
+.to-all-projects {
+    margin-top: -6rem;
+}
+
+.who-we-are-block {
+    background-color: var(--almost-white);
+    margin-top: 5rem;
+
+    & h2,
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.about-button {
+    & p {
+        padding: .5rem 1rem;
+        border: 2px solid var(--dark);
+        margin-top: 1rem;
+        display: inline-block;
+    }
+}
+
+.news-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .news__intro {
+        width: 36rem;
+        text-align: center;
+        margin-bottom: -5rem;
+    }
+}
+
+.news-block__image-left {
+    position: relative;
+
+    & img {
+        width: calc(100% - .5rem);
+        height: 100%;
+    }
+}
+
+.news-block__image {
+    position: relative;
+}
+
+.grid-cards--home {
+    width: 45%;
+    flex-grow: 1;
+    position: relative;
+}
+
+.clients-block {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+
+    & h2 {
+        margin-bottom: 3rem;
+    }
+
+    & .clients-list {
+        display: flex;
+        gap: 5rem;
+    }
+}
+
+/* ========== */
+
+.navbar {
+    position: relative;
+    z-index: 50;
+
+    & a {
+        color: var(--white);
+    }
+}
+
+.navbar div {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    font-size: 35px;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-items li:last-child .menu__link {
+    padding: .5rem 1rem;
+    border: 1px solid var(--white);
+}
+
+/* ========== */
+
+.banner__intro {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* ========== */
+
+.banner--dark {
+    color: var(--white);
+    background-color: var(--dark);
+    padding: 11rem 1.5rem 5.5rem 1.5rem;
+    transform: translateY(-6.3rem);
+    margin-bottom: -6.3rem;
+
+    & .banner--dark__title {
+        font-size: 50px;
+        font-family: "Sitka Heading";
+    }
+
+    & .banner--dark__intro {
+        margin-top: .8rem;
+        font-size: 24px;
+    }
+}
+
+.container--dark {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.grid-cards {
+    margin-top: 8.5rem;
+    margin-bottom: 8.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    & .grid-card {
+        width: 30%;
+        flex-grow: 1;
+        position: relative;
+    }
+}
+
+.card-projects .card__title,
+.card-blogs .card__part {
+    font-size: .9rem;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    background-color: var(--white);
+    padding: 1rem;
+    margin: 1rem 0 0 1rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.card-blogs .card__title {
+    font-size: 20px;
+    width: 100%;
+    color: var(--white);
+    background-color: hsla(0, 0%, 0%, 0.8);
+    padding: 2rem;
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+/* ========== */
+
+.block-row {
+    width: 100%;
+    max-height: 59rem;
+    display: flex;
+    justify-content: space-between;
+
+    & .block-row__text {
+        width: 50%;
+        padding: 8rem;
+        align-self: center;
+    }
+
+    & h2 {
+        font-size: 60px;
+        line-height: 1.1;
+    }
+
+    & img {
+        width: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    & p {
+        line-height: 2;
+    }
+}
+
+main .block-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.about__extra-text {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    line-height: 2;
+}
+
+.block__contact-info {
+    & h2, .block__contact-address {
+        margin-bottom: 1.5rem;
+    }
+
+    & a, p {
+        font-size: 20px;
+        line-height: 2;
+        font-style: normal;
+    }
+
+    & .contact__socials {
+        height: 1.25rem;
+        display: flex;
+        gap: 2rem;
+        filter: invert(1);
+    }
+
+    & img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+/* ========== */
+
+.blog__article-head {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    & .blog-detail__date {
+        color: var(--light-grey);
+        font-size: 24px;
+    }
+}
+
+.blog__article-banner,
+.who-we-are-block {
+    margin-bottom: 5rem;
+
+    & .banner--top__image {
+        width: 100%;
+        aspect-ratio: 1.5 / 1;
+        object-fit: cover;
+    }
+
+    & .banner--top__intro {
+        line-height: 2;
+        padding: 8rem;
+        align-self: center;
+    }
+}
+
+.blog__article-text {
+    margin-bottom: 10rem;
+
+    & p {
+        margin-bottom: 3rem;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & ol {
+        padding-left: 1.1rem;
+    }
+
+    & li {
+        font-size: 20px;
+        margin: 1.5rem 0;
+    }
+}
+
+.blog-detail__divide {
+    margin-bottom: 5rem;
+}
+
+.other-blogs {
+    margin-bottom: 5rem;
+
+    & .grid-cards {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.to-all-blogs,
+.to-all-projects {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.arrow--right {
+    width: 1rem;
+    margin-top: .2rem;
+}
+
+/* ========== */
+
+.project-detail__hero,
+.banner-home--top {
+    display: flex;
+    align-items: flex-end;
+    transform: translateY(-6.3rem);
+    position: relative;
+
+    & .hero-content {
+        display: flex;
+        color: var(--white);
+        margin-bottom: 10rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-60%);
+        z-index: 10;
+    }
+
+    & .hero-detail__image,
+    .banner-home__video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(.6);
+    }
+}
+
+.socials--hero {
+    position: absolute;
+    left: 83%;
+    z-index: 50;
+}
+
+.project-detail__text {
+    margin-bottom: 8rem;
+
+    & p {
+        margin-bottom: 3rem;
+    }
+
+    & img {
+        width: 100%;
+    }
+}
+
+.banner__project-kind {
+    font-size: 24px;
+}
+
+.banner__title {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.banner__socials {
+    z-index: 50;
+}
+
+/* ========== */
+
+.footer {
+    color: var(--white);
+    background-color: var(--dark);
+    padding: 6.8rem  1.5rem 2rem 1.5rem;
+
+    & a {
+        color: var(--white);
+    }
+
+    & .footer__row-two {
+        font-family: "Subset Work Sans";
+        font-style: lighter;
+        font-weight: 100;
+        padding-top: 2rem;
+    }
+
+    & .footer__row-two div {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.footer__menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    & .columns__column {
+        grid-column: auto;
+        
+        &.columns__column--right {
+            justify-self: end;
+        }
+    }
+}
+
+.footer__title,
+.footer__row-one .read-text {
+    margin-bottom: 1.5rem;
+}
+
+.footer__mail-link {
+    text-decoration: underline;
+}
+
+.banner__socials,
+.footer__socials {
+    margin: 3rem 0;
+    display: flex;
+    gap: 1.5rem;
+
+    & img {
+        max-height: 1.2rem;
+    }
+}

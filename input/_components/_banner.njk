@@ -1,0 +1,39 @@
+{% import "./_socials.njk" as file %}
+
+{% macro hero(image, intro) %}
+    <img class="banner--top__image" src="{{ image }}" alt="Banner afbeelding van het project">
+    <p class="banner--top__intro">
+        {{ intro }}
+    </p>
+{% endmacro %}
+
+{% macro heroDetail(kind, title, intro, image) %}
+    <div class="hero-content">
+        <div class="hero-detail__text">
+            <p aria-colspan="hero-detail__kind" class="banner__project-kind">
+                {{ kind }}
+            </p>
+            <h1 class="banner__title">
+                {{ title }}
+            </h1>
+            <p class="banner__intro">
+                {{ intro }}
+            </p>
+        </div>
+        {{ file.socials(socials) }}
+    </div>
+    <img class="hero-detail__image" src="{{ image }}" alt="Banner afbeelding van het project">
+{% endmacro %}
+
+{% macro banner(title, intro) %}
+    <div class="banner--dark">
+        <div class="container--dark columns">
+            <h1 class="banner--dark__title">
+                {{ title }}
+            </h1>
+            <p class="banner--dark__intro">
+                {{ intro }}
+            </p>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,26 @@
+---
+title: Studio Boost | Over ons
+tags: nav
+nav:
+    title: Over
+    order: 3
+image-two: /img/blog-ecommerce-trends/hero.png
+menuColor: dark
+---
+
+{% import "../_components/_blocks.njk" as file %}
+{% extends "../_layouts/block.njk" %}
+
+{% block main %}
+    {% block top %}
+        {{ file.blocks("Studio Boost is een creatief bureau dat gespecialiseerd is in het ontwerpen en ontwikkelen van websites, webshops en logo’s.", "h2", "/img/lachende-mensen.png", "Een foto van een groep lachende mensen.") }}
+
+        {{ file.blocks("Naast het ontwerpen en ontwikkelen van websites, webshops en logo’s biedt Studio Boost ook andere diensten aan zoals zoekmachine-optimalisatie (SEO), webhosting en onderhoud. Ze begrijpen dat het hebben van een professionele online aanwezigheid van vitaal belang is voor bedrijven en bieden daarom complete oplossingen aan die zowel betaalbaar als effectief zijn. Of het nu gaat om een start-up of een gevestigd bedrijf, Studio Boost kan helpen bij het versterken van de online aanwezigheid en het vergroten van de zichtbaarheid op het internet.", "p", "/img/wireframes.png", "Een foto van getekende wireframes.") }}
+    {% endblock top %}
+
+    {% block bottom %}
+        <p class="container--extra-small about__extra-text">
+            Naast het ontwerpen en ontwikkelen van websites, webshops en logo’s biedt Studio Boost ook andere diensten aan zoals zoekmachine-optimalisatie (SEO), webhosting en onderhoud. Ze begrijpen dat het hebben van een professionele online aanwezigheid van vitaal belang is voor bedrijven en bieden daarom complete oplossingen aan die zowel betaalbaar als effectief zijn. Of het nu gaat om een start-up of een gevestigd bedrijf, Studio Boost kan helpen bij het versterken van de online aanwezigheid en het vergroten van de zichtbaarheid op het internet.
+        </p>
+    {% endblock bottom %}
+{% endblock main %}
