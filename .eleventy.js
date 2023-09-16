@@ -33,7 +33,7 @@ module.exports = (eleventyConfig) => {
       // place of layouts
       layouts: "../_layouts",
       data: "../_data",
-      pathprefix: "/output/",
+      pathprefix: "/",
     },
   };
 };
